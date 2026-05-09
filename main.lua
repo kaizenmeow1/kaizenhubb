@@ -56,7 +56,7 @@ end
 
 local KEY_VALID    = "FIRSTRELEASED"
 local KEY_FILE     = "kaizenhub_key.txt"
-local DISCORD_LINK = "https://discord.gg/kaizenhub"
+local DISCORD_LINK = "https://discord.gg/7gGShaZr2"
 
 local function _readKey()
     local ok, data = pcall(function()
