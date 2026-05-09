@@ -54,7 +54,7 @@ do
         or loadstring(game:HttpGet("https://raw.githubusercontent.com/biarzxc1/kaizenhub/main/Library.lua"))()
 end
 
-local KEY_VALID    = "FIRSTRELEASED"
+local KEY_VALID    = "FIRSTRELEASE"
 local KEY_FILE     = "kaizenhub_key.txt"
 local DISCORD_LINK = "https://discord.gg/7gGShaZr2"
 
