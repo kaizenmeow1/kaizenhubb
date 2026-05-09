@@ -15,7 +15,7 @@ end
 -- ============================================================
 --                    KEY SYSTEM (Kaizen Hub)
 -- ============================================================
-local KEY_VALID    = "FIRSTRELEASE"
+local KEY_VALID    = "FIRSTRELEASED"
 local KEY_FILE     = "kaizenhub_key.txt"
 local DISCORD_LINK = "https://discord.gg/kaizenhub"  -- replace with your real invite
 
