@@ -90,7 +90,7 @@ if not _verified then
     for _, c in ipairs(_hui():GetChildren()) do _before[c] = true end
 
     local KeyWindow = SpeedHubX:CreateWindow({
-        Title       = "Kaizen Hub Version 1.0.0",
+        Title       = "Kaizen Hub | Version 1.0.0 | Developed by Kaizen ZSTAFFF",
         Description = "Enter your key to unlock the script",
         SizeUi      = UDim2.fromOffset(460, 280),
     })
@@ -4394,7 +4394,7 @@ else
 end
 
 local Window = SpeedHubX:CreateWindow({
-    Title       = "Kaizen Hub Version 1.0.0",
+    Title       = "Kaizen Hub | Version 1.0.0 | Developed by Kaizen ZSTAFFF",
     Description = HUB_DESCRIPTION,
     ["Tab Width"] = tabW,
     SizeUi      = UDim2.fromOffset(winW, winH),
