@@ -1,3 +1,45 @@
+if not LPH_OBFUSCATED then
+    LPH_ENCNUM = function(toEncrypt, ...)
+        assert(type(toEncrypt) == "number" and #{...} == 0, "LPH_ENCNUM only accepts a single double or integer as an argument.")
+        return toEncrypt
+    end
+    LPH_NUMENC = LPH_ENCNUM
+
+    LPH_ENCSTR = function(toEncrypt, ...)
+        assert(type(toEncrypt) == "string" and #{...} == 0, "LPH_ENCSTR only accepts a single string as an argument.")
+        return toEncrypt
+    end
+    LPH_STRENC = LPH_ENCSTR
+
+    LPH_ENCFUNC = function(toEncrypt, encKey, decKey, ...)
+        assert(type(toEncrypt) == "function" and type(encKey) == "string" and #{...} == 0, "LPH_ENCFUNC accepts a function, constant string, and string variable as arguments.")
+        return toEncrypt
+    end
+    LPH_FUNCENC = LPH_ENCFUNC
+
+    LPH_JIT = function(f, ...)
+        assert(type(f) == "function" and #{...} == 0, "LPH_JIT only accepts a single function as an argument.")
+        return f
+    end
+    LPH_JIT_MAX = LPH_JIT
+
+    LPH_NO_VIRTUALIZE = function(f, ...)
+        assert(type(f) == "function" and #{...} == 0, "LPH_NO_VIRTUALIZE only accepts a single function as an argument.")
+        return f
+    end
+
+    LPH_NO_UPVALUES = function(f, ...)
+        assert(type(setfenv) == "function", "LPH_NO_UPVALUES can only be used on Lua versions with getfenv & setfenv")
+        assert(type(f) == "function" and #{...} == 0, "LPH_NO_UPVALUES only accepts a single function as an argument.")
+        return f
+    end
+
+    LPH_CRASH = function(...)
+        assert(#{...} == 0, "LPH_CRASH does not accept any arguments.")
+        error("LPH_CRASH called")
+    end
+end
+
 local SpeedHubX
 do
     local ok, library = pcall(function()
@@ -48,7 +90,7 @@ if not _verified then
     for _, c in ipairs(_hui():GetChildren()) do _before[c] = true end
 
     local KeyWindow = SpeedHubX:CreateWindow({
-        Title       = "Kaizen Hub | Key System",
+        Title       = "Kaizen Hub Version 1.0.0",
         Description = "Enter your key to unlock the script",
         SizeUi      = UDim2.fromOffset(460, 280),
     })
@@ -101,7 +143,6 @@ if not _verified then
 
     KeySection:AddButton({
         Title    = "Get Key (Discord)",
-        Content  = "Copy our Discord invite to clipboard",
         Callback = function()
             pcall(function()
                 if setclipboard then setclipboard(DISCORD_LINK)
@@ -4353,7 +4394,7 @@ else
 end
 
 local Window = SpeedHubX:CreateWindow({
-    Title       = "Kaizen Hub",
+    Title       = "Kaizen Hub Version 1.0.0",
     Description = HUB_DESCRIPTION,
     ["Tab Width"] = tabW,
     SizeUi      = UDim2.fromOffset(winW, winH),
